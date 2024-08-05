@@ -1,0 +1,385 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50; /* Dark Blue-Gray */
+    color: #ecf0f1; /* Light Gray */
+  }
+  
+  header {
+    position: relative;
+    background: url('tc.jpg') no-repeat center center/cover;
+    color: #ecf0f1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    padding: 20px 0;
+    position: fixed; /* Fixes the nav at the top of the viewport */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Ensures it spans the full width */
+    width: 100%; /* Full width of the viewport */
+    z-index: 5; /* Ensure nav is above other content */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+  }
+  
+  nav ul li {
+    position: relative; /* Ensure pseudo-elements are positioned correctly */
+  }
+  
+  nav ul li a {
+    color: #000000; /* Light Gray */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover, nav ul li a:focus {
+    background: rgba(255, 255, 255, 0.3); /* Light overlay for hover effect */
+    color: #1912f3; /* Highlight color on hover */
+  }
+  
+  /* Optional: Add a subtle underline effect on hover */
+  nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #1d0ae9; /* Highlight color */
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li a:hover::after, nav ul li a:focus::after {
+    width: 100%;
+  }
+  
+  .header-content {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(44, 62, 80, 0.8);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 3.5em;
+    color: #f1eae9; /* Soft Off-White */
+  }
+  
+  p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #bdc3c7; /* Light Gray */
+  }
+  
+  .btn {
+    background: #423ce7; /* Purple-Blue */
+    color: #000000;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #151414; /* Dark Gray */
+  }
+  
+  section {
+    padding: 60px 20px;
+    background-color: #000000; /* Darker Blue */
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #f1eae9; /* Soft Off-White */
+  }
+  
+  .service, .testimonial {
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Light Gray */
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #000000; /* Black */
+  }
+  
+  input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #34495e; /* Darker Blue */
+    border-radius: 5px;
+    background-color: #2c3e50; /* Dark Blue-Gray */
+    color: #ecf0f1;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #bdc3c7; /* Light Gray */
+  }
+  
+  button {
+    background: #423ce7; /* Purple-Blue */
+    color: #ecf0f1;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #2a2b5a; /* Darker Purple-Blue */
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 40px;
+    border: 3px solid #000000; /* Black */
+    border-radius: 5px;
+  }
+  
+  footer {
+    background: #0f1aee; /* Black */
+    color: #000000; /* White */
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .contact-details {
+    margin-top: 20px;
+  }
+  
+  .contact-details p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #3498db; /* Blue for hover effect */
+  }
+  
+  .fb-icon::before {
+    content: url('facebook-icon.png'); /* Path to Facebook icon */
+    margin-right: 8px;
+  }
+  
+  .twitter-icon::before {
+    content: url('twitter-icon.png'); /* Path to Twitter icon */
+    margin-right: 8px;
+  }
+  
+  .instagram-icon::before {
+    content: url('instagram-icon.png'); /* Path to Instagram icon */
+    margin-right: 8px;
+  }
+  /* Existing CSS remains unchanged */
+
+#contact .map-image {
+    margin-bottom: 40px;
+    text-align: center; /* Centers the content horizontally */
+  }
+  
+  #contact .map-image img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #000000; /* Black */
+    border-radius: 5px;
+    display: inline-block; /* Ensure it behaves like an inline element */
+  }
+  .services-container {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    margin: 20px 0; /* Margin around the container */
+  }
+  
+  .service {
+    text-align: center; /* Center-align content */
+    color: #ecf0f1; /* Light Gray */
+    max-width: 500px; /* Set a maximum width for each service item */
+    margin: 0 15px; /* Space between each service item */
+    flex: 1 1 20px; /* Flex properties for responsiveness */
+  }
+  
+  .service img {
+    max-width: 300px; /* Set the maximum width of the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #000000; /* Border color */
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #000000; /* Black */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ecf0f1; /* Light Gray */
+    font-size: 1.5em; /* Adjust size if needed */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icon img {
+    width: 30px; /* Adjust size if needed */
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon */
+  }
+  
+  .social-icon:hover img {
+    filter: brightness(1.5); /* Brighten the icon */
+  }
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('page.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* High z-index to overlay everything else */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .splash-content {
+    text-align: center;
+    color: #ffffff; /* White color for text */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  }
+  
+  .splash-logo {
+    max-width: 200px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+  }
+  
+  .splash-text {
+    font-size: 1.5em; /* Adjust font size as needed */
+    font-weight: bold;
+    animation: fadeInText 2s ease-in-out; /* Text fade-in animation */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .btn {
+    background-color: #423ce7; /* Purple-Blue */
+    color: #ecf0f1; /* Light Gray */
+    padding: 10px 25px; /* Padding for size */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    transition: background 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Display as inline-block for proper button behavior */
+  }
+  
+  .btn:hover {
+    background-color: #2a2b5a; /* Darker Purple-Blue */
+  }
+  
+  .btn-map {
+    margin-top: 20px; /* Space above the button */
+  }
+  
